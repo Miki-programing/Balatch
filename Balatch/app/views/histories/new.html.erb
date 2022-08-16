@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-8">
+    <%= form_with model: @history do |f| %>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control"%>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Create", class: "btn btn-primary"%>
+      </div><!-- /.form-group -->
+    <% end %>
+  </div><!-- /.col-8 -->
+</div><!-- /.row -->
