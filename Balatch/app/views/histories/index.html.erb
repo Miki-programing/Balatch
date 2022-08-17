@@ -1,1 +1,7 @@
-<div></div>
+<div class="row">
+  <div class="col">
+    <%= month_calendar events: @histories do |date, history| %>
+      <%= date %>
+    <% end %>
+  </div>
+</div>

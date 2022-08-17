@@ -1,0 +1,2 @@
+module PayDepositMethodsHelper
+end
