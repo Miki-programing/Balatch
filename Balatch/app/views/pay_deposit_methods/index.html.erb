@@ -1,9 +1,11 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 mx-auto my-3">
+    <h3>一覧</h3>
     <table class="table">
       <tbody>
         <% @methods.each do |method| %>
           <tr>
+            <th><%= method.group_i18n %></th>
             <th><%= method.name %></th>
           </tr>
         <% end %>
@@ -12,7 +14,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-6 mx-auto">
+  <div class="col-md-6 mx-auto my-3">
     <%= form_with model: @method do |f| %>
       <div class="form-group">
         <%= f.label :name %>
@@ -20,7 +22,7 @@
       </div>
       <div class="form-group">
         <%= f.label :group %>
-        <%= f.select :group, [["現金","cash"], ["クレジット", "credit"], ["オンライン決済", "online"]], {}, {:class => "form-control"} %>
+        <%= f.select :group, PayDepositMethod.groups_i18n.keys.map{|k| [I18n.t("enums.pay_deposit_method.group.#{k}"), k]}, {prompt: "選択してください"}, class: "form-control" %>
       </div>
       <div class="form-group text-right">
         <%= f.submit "Create", class: "btn btn-primary" %>

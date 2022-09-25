@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_08_16_234553) do
 
   create_table "histories", force: :cascade do |t|
-    t.time "date", null: false
+    t.date "date", null: false
     t.boolean "is_paid", null: false
     t.integer "price", null: false
     t.text "content"

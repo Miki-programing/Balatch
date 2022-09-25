@@ -1,0 +1,8 @@
+ja:
+  enums:
+    pay_deposit_method:
+      group:
+        cash: 現金
+        credit: クレジット
+        online: オンライン決済
+        debit: デビット
