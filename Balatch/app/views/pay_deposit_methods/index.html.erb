@@ -7,6 +7,11 @@
           <tr>
             <th><%= method.group_i18n %></th>
             <th><%= method.name %></th>
+            <th>
+              <%= link_to edit_pay_deposit_method_path(method) do %>
+                <i class="fas fa-pen"></i>
+              <% end %>
+            </th>
           </tr>
         <% end %>
       </tbody>

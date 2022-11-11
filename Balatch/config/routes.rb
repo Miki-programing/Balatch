@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: "homes#top"
   resources :histories, only: [:index, :new, :create, :destroy]
   get "methods" => "pay_deposit_methods#index"
-  resources :pay_deposit_methods, only: [:create, :destroy]
+  resources :pay_deposit_methods, only: [:create, :destroy, :edit, :update]
 end
