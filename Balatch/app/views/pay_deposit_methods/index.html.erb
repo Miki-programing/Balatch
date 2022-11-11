@@ -8,9 +8,25 @@
             <th><%= method.group_i18n %></th>
             <th><%= method.name %></th>
             <th>
-              <%= link_to edit_pay_deposit_method_path(method) do %>
-                <i class="fas fa-pen"></i>
-              <% end %>
+              <div>
+                <a data-toggle="modal" data-target="#testModal">
+                  <i class="fas fa-pen"></i>
+                </a>
+              </div>
+              <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">編集画面</h4>
+                        </div>
+                        <div class="px-3">
+                          <%= render "form", method: method %></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </th>
           </tr>
         <% end %>

@@ -15,10 +15,6 @@ class PayDepositMethodsController < ApplicationController
     end
   end
 
-  def edit
-    @method = PayDepositMethod.find(params[:id])
-  end
-
   def update
     @method = PayDepositMethod.find(params[:id])
     if @method.update(pay_deposit_method_params)
