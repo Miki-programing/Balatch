@@ -1,2 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+.calendar-heading {
+  text-align: center;
+}
+
+.simple-caLendar>.td {
+  height: 100px;
+}

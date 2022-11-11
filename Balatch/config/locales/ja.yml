@@ -6,3 +6,59 @@ ja:
         credit: クレジット
         online: オンライン決済
         debit: デビット
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+  date:
+    abbr_day_names:
+    - Sun.
+    - Mon.
+    - Tue.
+    - Wed.
+    - Thu.
+    - Fri.
+    - Sat.
+    abbr_month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    formats:
+      default: "%Y/%m/%d"
+      long: "%Y年%m月%d日(%a)"
+      short: "%m/%d"
+    month_names:
+    - 
+    - Jan.
+    - Feb.
+    - Mar.
+    - Apr.
+    - May
+    - Jun.
+    - Jul.
+    - Aug.
+    - Sep.
+    - Oct.
+    - Nov.
+    - Dec.
+    order:
+    - :year
+    - :month
+    - :day
