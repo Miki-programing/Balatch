@@ -24,6 +24,12 @@ class PayDepositMethodsController < ApplicationController
     end
   end
 
+  def destroy
+    @method = PayDepositMethod.find(params[:id])
+    @method.destroy
+    redirect_to methods_path
+  end
+
   private
 
   def pay_deposit_method_params
