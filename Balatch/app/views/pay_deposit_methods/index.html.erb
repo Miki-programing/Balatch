@@ -9,18 +9,18 @@
             <th><%= method.name %></th>
             <th>
               <div>
-                <a data-toggle="modal" data-target="#testModal">
+                <a data-toggle="modal" data-target="#testModal-<%= method.id %>">
                   <i class="fas fa-pen"></i>
                 </a>
               </div>
-              <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+              <div class="modal fade" id="testModal-<%= method.id %>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="myModalLabel">編集画面</h4>
                         </div>
                         <div class="px-3">
-                          <%= render "form", method: method %></div>
+                          <%= render "form", method: method, name: "編集" %></div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
                             <%= link_to "削除", pay_deposit_method_path(method), method: :delete, class: "btn btn-danger" %>
@@ -37,6 +37,6 @@
 </div>
 <div class="row">
   <div class="col-md-6 mx-auto my-3">
-    <%= render "form", method: @method %>
+    <%= render "form", name: "新規投稿", method: @method %>
   </div>
 </div>
