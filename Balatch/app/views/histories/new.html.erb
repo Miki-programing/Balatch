@@ -10,14 +10,15 @@
         </br>
         <div class="btn-group">
           <% f.radio_button :is_paid, "支出"%>
-          <%= f.label "is_paid_支出", class: "btn btn-outline-secondary" %>
+          <%= f.label "支出", class: "btn btn-outline-secondary" %>
           <% f.radio_button :is_paid, "収入" %>
-          <%= f.label "is_paid_収入", class: "btn btn-outline-secondary" %>
+          <%= f.label "収入", class: "btn btn-outline-secondary" %>
         </div>
       </div>
       <div class="form-group">
         <%= f.label :pay_deposit_method_id %>
-        <%= f.select :pay_deposit_method_id, options_from_collection_for_select(PayDepositMethod.all, :id, :name), {}, {:class => "form-control"} %>
+        <%= f.select :pay_depωosit_method_id, options_from_collection_for_select(PayDepositMethod.all, :id, 
+        :full_method_name), {}, {:class => "form-control"} %>
       </div>
       <div class="form-group">
         <%= f.label :price %>
